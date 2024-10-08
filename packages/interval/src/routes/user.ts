@@ -1,4 +1,4 @@
-import { Layout, Page, io } from "@interval/sdk";
+import { Layout, Page, io } from "@utilhq/sdk";
 import { useTransaction } from "@terminal/core/drizzle/transaction";
 import { userTable } from "@terminal/core/user/user.sql";
 

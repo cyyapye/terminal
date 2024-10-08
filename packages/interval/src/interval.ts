@@ -1,4 +1,4 @@
-import { Interval } from "@interval/sdk";
+import { UtilHQ } from "@utilhq/sdk";
 import { Resource } from "sst";
 
 import Product from "./routes/product";
@@ -7,7 +7,8 @@ import { User } from "./routes/user";
 import { Order } from "./routes/order";
 import { InventoryPage } from "./routes/inventory";
 
-const interval = new Interval({
+const utilhq = new UtilHQ({
+  endpoint: "wss://app.utilhq.com/websocket",
   apiKey: Resource.IntervalKey.value,
   routes: {
     product: Product,
@@ -18,4 +19,4 @@ const interval = new Interval({
   },
 });
 
-interval.listen();
+utilhq.listen();
